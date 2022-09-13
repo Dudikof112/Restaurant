@@ -2,11 +2,7 @@ package Restaurant.service;
 
 import Restaurant.model.Table;
 
-import java.util.Set;
 
-public interface TableService {
+public interface TableService  extends CrudService <Table, Long> {
 
-    Table findById(Long id);
-    Table save(Table table);
-    Set<Table> fingAll();
 }
