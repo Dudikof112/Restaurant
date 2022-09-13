@@ -1,6 +1,6 @@
 package Restaurant.model;
 
-public class Table {
+public class Table extends BaseEntity {
 
     private String size;
     private boolean isReserved;

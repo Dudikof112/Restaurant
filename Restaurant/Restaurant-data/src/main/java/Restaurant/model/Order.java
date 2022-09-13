@@ -1,5 +1,5 @@
 package Restaurant.model;
 
-public class Order {
+public class Order extends BaseEntity{
 
 }

@@ -1,6 +1,6 @@
 package Restaurant.model;
 
-public class Client {
+public class Client extends BaseEntity{
 
     private String firstName;
     private String lastName;
