@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Client</title>
+</head>
+<body>
+<!--/*@thymesVar id="client" type="Restaurant.model.Client"*/-->
+<h1 th:text="'List of Clients'">List of Clients</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>First name</th>
+            <th>Last Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="client : ${clients}">
+            <td th:text="${client.id}">1</td>
+            <td th:text="${client.firstName}">Jan</td>
+            <td th:text="${client.lastName}">Kowalski</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

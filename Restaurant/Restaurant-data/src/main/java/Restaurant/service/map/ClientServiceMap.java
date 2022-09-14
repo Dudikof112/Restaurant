@@ -1,11 +1,13 @@
 package Restaurant.service.map;
 
 import Restaurant.model.Client;
-import Restaurant.service.CrudService;
+import Restaurant.service.ClientService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class ClientServiceMap extends AbstractMapService<Client, Long> implements CrudService<Client, Long> {
+@Service
+public class ClientServiceMap extends AbstractMapService<Client, Long> implements ClientService {
 
     @Override
     public Set<Client> findAll() {
@@ -19,7 +21,7 @@ public class ClientServiceMap extends AbstractMapService<Client, Long> implement
 
     @Override
     public Client save(Client object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override
@@ -31,5 +33,10 @@ public class ClientServiceMap extends AbstractMapService<Client, Long> implement
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
+    }
+
+    @Override
+    public Client findByLastName(String lastName) {
+        return null;
     }
 }

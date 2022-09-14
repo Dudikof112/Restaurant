@@ -1,11 +1,14 @@
 package Restaurant.service.map;
 
 import Restaurant.model.Table;
-import Restaurant.service.CrudService;
+import Restaurant.service.TableService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class TableServiceMap extends AbstractMapService<Table, Long> implements CrudService<Table, Long> {
+
+@Service
+public class TableServiceMap extends AbstractMapService<Table, Long> implements TableService {
 
     @Override
     public Set<Table> findAll() {
@@ -19,7 +22,7 @@ public class TableServiceMap extends AbstractMapService<Table, Long> implements 
 
     @Override
     public Table save(Table object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override

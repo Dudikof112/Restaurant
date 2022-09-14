@@ -2,10 +2,17 @@ package Restaurant.model;
 
 public class Table extends BaseEntity {
 
+    private String number;
     private String size;
-    private boolean isReserved;
     private boolean isOutside;
-    private Client client;
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
 
     public String getSize() {
         return size;
@@ -15,27 +22,11 @@ public class Table extends BaseEntity {
         this.size = size;
     }
 
-    public boolean isReserved() {
-        return isReserved;
-    }
-
-    public void setReserved(boolean reserved) {
-        isReserved = reserved;
-    }
-
     public boolean isOutside() {
         return isOutside;
     }
 
     public void setOutside(boolean outside) {
         isOutside = outside;
-    }
-
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
     }
 }

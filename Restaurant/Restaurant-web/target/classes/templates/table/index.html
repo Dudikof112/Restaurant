@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List of table</title>
+</head>
+<body>
+<!--/*@thymesVar id="table" type="Restaurant.model.Table"*/-->
+
+    <h1 th:text="'List of Tables'">List of tables</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Number</th>
+        <th>Size</th>
+        <th>Is Outside</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="table : ${tables}">
+        <td th:text="${table.id}">1</td>
+        <td th:text="${table.number}">1</td>
+        <td th:text="${table.size}">2 people</td>
+        <td th:text="${table.isOutside}">no</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
