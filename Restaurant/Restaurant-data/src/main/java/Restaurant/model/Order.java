@@ -1,9 +1,21 @@
 package Restaurant.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+@Entity
+@javax.persistence.Table
 public class Order extends BaseEntity{
 
+    @OneToOne
+    @JoinColumn(name = "type_id")
     private Table nrTable;
+    @OneToOne
+    @JoinColumn(name = "client")
     private Client client;
+    @Column(name = "order")
     private String order;
 
     public Table getNrTable() {

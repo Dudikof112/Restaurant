@@ -21,7 +21,12 @@ public class ClientServiceMap extends AbstractMapService<Client, Long> implement
 
     @Override
     public Client save(Client object) {
-        return super.save(object);
+
+        if(object != null){
+            return super.save(object);
+        }else{
+            return null;
+        }
     }
 
     @Override

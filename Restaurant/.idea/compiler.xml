@@ -8,7 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Restaurant-data" />
       </profile>
-      <profile name="Disabled" />
+      <profile name="Disabled" enabled="true" />
       <profile name="Annotation profile for Restaurant">
         <sourceOutputDir name="../target/generated-sources/annotations" />
         <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />

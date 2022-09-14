@@ -6,6 +6,7 @@ public class Visit extends BaseEntity{
     private LocalDate date;
     private String description;
     private Client client;
+    private Table table;
 
     public LocalDate getDate() {
         return date;
@@ -29,5 +30,13 @@ public class Visit extends BaseEntity{
 
     public void setClient(Client client) {
         this.client = client;
+    }
+
+    public Table getTable() {
+        return table;
+    }
+
+    public void setTable(Table table) {
+        this.table = table;
     }
 }

@@ -29,11 +29,17 @@ public class DataLoader implements CommandLineRunner {
         Client client1 = new Client();
         client1.setFirstName("Jan");
         client1.setLastName("Kowalski");
+        client1.setAddress("Korzuchowa 15");
+        client1.setCity("Wygwizdowo");
+        client1.setTelephone("1234567890");
         clientService.save(client1);
 
         Client client2 = new Client();
         client2.setFirstName("Anna");
         client2.setLastName("Górska");
+        client2.setAddress("Korzuchowa 15");
+        client2.setCity("Wygwizdowo");
+        client2.setTelephone("1098765432");
         clientService.save(client2);
 
         System.out.println(" ");

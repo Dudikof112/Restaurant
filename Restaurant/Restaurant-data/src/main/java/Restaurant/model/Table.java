@@ -1,9 +1,17 @@
 package Restaurant.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity
+@javax.persistence.Table
 public class Table extends BaseEntity {
 
+    @Column(name = "number")
     private String number;
+    @Column(name = "size")
     private String size;
+    @Column(name = "is_outside")
     private boolean isOutside;
 
     public String getNumber() {
